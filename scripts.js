@@ -1,4 +1,4 @@
-// Placeholder for JavaScript functionality
+// JavaScript functionality for AI Agency website
 
 document.addEventListener("DOMContentLoaded", () => {
     // Add smooth scrolling for anchor links
@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Example: Animation trigger on scroll (optional)
-    const animatedSections = document.querySelectorAll("section");
+    // Animation trigger on scroll
+    const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+                entry.target.classList.add("section-visible");
             }
         });
     }, { threshold: 0.1 });
 
-    animatedSections.forEach(section => observer.observe(section));
+    sections.forEach(section => observer.observe(section));
 });
