@@ -1,18 +1,15 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
-const menuOverlay = document.getElementById('menu-overlay');
+const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-  menuOverlay.classList.toggle('active');
-  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
 });
 
 // Close menu when a link is clicked
-const menuLinks = document.querySelectorAll('.menu-links a');
-menuLinks.forEach(link => {
+navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    menuOverlay.classList.remove('active');
-    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
   });
 });
 

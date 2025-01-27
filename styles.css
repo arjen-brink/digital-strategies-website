@@ -41,11 +41,10 @@ body {
   }
   
   nav .hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    z-index: 1001;
   }
   
   nav .hamburger span {
@@ -55,57 +54,28 @@ body {
     transition: all 0.3s ease;
   }
   
-  /* Full-screen Menu Overlay */
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
-  }
-  
-  .menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .menu-container {
-    text-align: center;
-  }
-  
-  .menu-links {
+  nav .nav-links {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 1rem;
     margin: 0;
+    padding: 0;
   }
   
-  .menu-links li {
-    margin: 1.5rem 0;
-  }
-  
-  .menu-links a {
+  nav .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1rem;
     transition: color 0.3s ease;
   }
   
-  .menu-links a:hover {
+  nav .nav-links a:hover {
     color: #007BFF;
   }
   
   /* Hero Section */
   .hero {
-    background-image: url('image1.jpg');
+    background-image: url('ai-hero.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -258,6 +228,26 @@ body {
   
   /* Responsive Styles */
   @media (max-width: 768px) {
+    nav .hamburger {
+      display: flex;
+    }
+  
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(51, 51, 51, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  
+    nav .nav-links.active {
+      display: flex;
+    }
+  
     .hero h1 {
       font-size: 2rem;
     }
