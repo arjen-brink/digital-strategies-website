@@ -1,6 +1,9 @@
-// Simple form submission handling
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    console.log('Thank you for reaching out! We will get back to you soon.');
-    // You can add AJAX or fetch() here to handle form submission
-  });
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when a link is
