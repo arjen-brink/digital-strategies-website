@@ -16,5 +16,5 @@ navLinks.querySelectorAll('a').forEach(link => {
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  alert('Thank you for reaching out! We will get back to you soon.');
+  console.log('Thank you for reaching out! We will get back to you soon.');
 });
