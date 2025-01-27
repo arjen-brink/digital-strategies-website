@@ -1,20 +1,23 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+const menuOverlay = document.getElementById('menu-overlay');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
+  hamburger.classList.toggle('active');
 });
 
 // Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
+const menuLinks = document.querySelectorAll('.menu-links a');
+menuLinks.forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    hamburger.classList.remove('active');
   });
 });
 
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  console.log('Thank you for reaching out! We will get back to you soon.');
+  alert('Thank you for reaching out! We will get back to you soon.');
 });
